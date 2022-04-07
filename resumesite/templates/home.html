@@ -1,0 +1,217 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Victor Nkuna - Curriculum Vitae</title>
+
+<meta name="viewport" content="width=device-width"/>
+<meta name="description" content="The Curriculum Vitae of Victor Nkuna."/>
+<meta charset="UTF-8"> 
+
+<link type="text/css" rel="stylesheet" href="{% static  'css/style.css'	%}">
+<link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
+{% comment %} style sheet for fontawesom {% endcomment %}
+{% block style %}
+        <link rel="stylesheet" type="text/css" href="{% static "fontawesome/css/all.min.css" %}" />
+{% endblock %}
+
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+<body id="top">
+<div id="cv" class="instaFade">
+	<div class="mainDetails">
+		<div id="headshot" class="quickFade">
+			<img src="{% static 'images/pic.jpg'	%}" alt="Victor Nkuna" />
+		</div>
+		
+		<div id="name">
+			<h1 class="quickFade delayTwo">Victor Nkuna</h1>
+			<h2 class="quickFade delayThree">Software Developer</h2>
+		</div>
+		
+		<div id="contactDetails" class="quickFade delayFour">
+			<ul>
+				<li>e: <a href="mailto:victor.nkuna@yahoo.com" target="_blank">victor.nkuna@yahoo.com</a></li>
+				<li>w: <a href="http://www.nkuna.com">www.nkuna.com</a></li>
+				<li>m: 0760170851</li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+	
+	<div id="mainArea" class="quickFade delayFive">
+		<section>
+			<article>
+				<div class="sectionTitle">
+					<h1>Personal Profile</h1>
+				</div>
+				
+				<div class="sectionContent">
+					<p>I have completed  technical training  in full-stack web-development with a Cape Town-based NPO called:<a href="https://www.lifechoices.co.za/academy/coding" class="lifechoices" target="_blank" >Life choices</a>.
+
+						I am looking for roles in the area of computing that may be available even internships that are suitable for my skill set
+						I was hoping that if there are any employment opportunities  that  may be  available.
+						
+						My primary skill-set inlude professional knowledge as it relates to web development and software development, I have intermediate    knowledge of  the following programming languages ranging from HTML, CSS, JavaScript, Python, SQL and Java, and various web-based frameworks such as React, NodeJS, ExpressJS, Flask, and Django, SpringBoot and I have also studied Bachelor of Commerce(Management Studies)  up to third-year level and transcript is available upon request.</p>
+				</div>
+			</article>
+			<div class="clear"></div>
+		</section>
+		
+		
+		<section>
+			<div class="sectionTitle">
+				<h1>Work Experience</h1>
+			</div>
+			
+			<div class="sectionContent">
+
+				{% comment %} The youngligns experience {% endcomment %}
+
+				
+				<article>
+					<h2> Software Developer |Younglings.Africa</h2>
+					<p class="subDetails">1 Jan 2022 -Present</p>
+
+					<p>	
+						writing ,debugging and testing new code /or maintain existing code base on ad hoc basis.
+						upskilling in the latest technology and trends,depending on the needs of the client. 
+						
+						
+
+	
+
+					</p>
+				</article>
+
+				{% comment %} end of youngligns experience{% endcomment %}
+				<article>
+					<h2>Virtual Customer Service Associate | Amazon Development Centre( South Africa) (PTY) LTD</h2>
+					<p class="subDetails">October 2021 - December 2021</p>
+					<p>Resolve 15 to 25 customers emails or live chats per hour , investigate and resolve account-specific issues related to order shipments.
+						Communicate issues to appropriate teams as necessary for quick resolution. Report all product and service-related trends to the Customer Care  Team Leaders.
+						Reply to pre-order questions and promotions via email and online ordering process.
+						Address and resolve post-order questions regarding shipping,billing adn delivery
+
+
+					</p>
+				</article>
+				
+				<article>
+					<h2>Junior Software Tester |LC-Studio</h2>
+					<p class="subDetails">April 2021 - August 2021</p>
+					<p>Design and implement Test Artifacts(Test plans,Test Cases ,and Test Suites)
+						Review ,analyze & Identtify test requirements,test strategy based on the design specifications from technical document/business requirements/and/or development brief
+						Understading of the SDLC process and Agile development methodology
+						Automating test processes using tools such as selenium and cucumber.
+						API Testing using Postman and/or SoupUI.
+						End to End testing of systems that are ready for deployment and/or production environment.
+
+					</p>
+				</article>
+				
+				<article>
+					<h2>Residence Student LIbrarian | Leo Marquard Residence</h2>
+					<p class="subDetails">January 2016 - December 2016</p>
+					<p>Provided valuable input into library development and raised the profile of the residence library among  peers
+						Issuing and returning books,displaying and promoting books,shelving,reviewing ,books,assisting users to find information ,
+						helping library users with the e-catalogue and ICT related issues ,
+					Assisting first year students to process new books on our e-library system.
+					</p>
+				</article>
+			</div>
+			<div class="clear"></div>
+		</section>
+		
+		
+		<section>
+			<div class="sectionTitle">
+				<h1>Key Skills</h1>
+			</div>
+			
+			<div class="sectionContent">
+				<ul class="keySkills">
+					<li>Python programming</li>
+					<li>Django Framework</li>
+					<li>Flask Framework</li>
+					<li>Web:HTML5,CSS3,JS</li>
+					<li>Testing Web Application</li>
+					<li>NodeJ:ExpressJS</li>
+					<li>DBMS:PostgreSQL,MongoDB</li>
+					<li>API Development</li>
+
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</section>
+		{% comment %} WE GOING TO LIST SOFTSKILLS {% endcomment %}
+		
+		<section>
+		
+			
+			<div class="sectionContent">
+				<ul class="keySkills">
+					<li>knowledge of Servers(Apache,NGINX) </li>
+					<li>Linux Operating System</li>
+					<li>Data Structure and Algorithms</li>
+					<li> Version Control Systems:Git and GitHub</li>
+					<li>Problem-solving</li>
+					<li>OOP knowledge</li>
+					<li>Good Communication and interpersonal skills</li>
+					<li>Understanding of the SDLC,and Agile methodologies</li>
+					
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</section>
+		
+		
+		<section>
+			<div class="sectionTitle">
+				<h1>Education</h1>
+			</div>
+			
+			<div class="sectionContent">
+				<article>
+					<h2>University of Cape Town</h2>
+					<p class="subDetails">Qualification:Bcom(Management Studies)</p>
+					<p>Management Studies  specialization  is a  more personalised
+						combination of disciplines and the opportunity to tailor the degree to the specific  needs and
+						requirements of the student. The combination of academic rigour, breadth and flexibility, enables
+						students to leverage their strengths and interests and makes graduates highly
+						attractive to a range of employers</p>
+				</article>
+				
+				<article>
+					<h2>Ngakana Secondary School</h2>
+					<p class="subDetails">National Senior Certificate(NSC) Grade 12</p>
+					<p>The NQF Level 4: Matric qualification.</p>
+				</article>
+			</div>
+			<div class="clear"></div>
+		</section>
+		
+	</div>
+
+	<section style="text-align:center">
+		<a href="https://www.facebook.com/victor.roberts.545402/"><i class=" fas fa-facebook"></i></a>
+		<a href="https://twitter.com/Victor__Nkuna"><i class="fas fa-twitter"></i></a>
+		<a href="https://www.linkedin.com/in/victor-nkuna-24526911a/"><i class="fas fa-linkedin"></i></a>
+		<a href="https://github.com/developerVictorNkuna"><i class="fas fa-github"></i></a>
+		<p>victor.nkuna.com &copy; 2022</p>
+	</section>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3753241-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>

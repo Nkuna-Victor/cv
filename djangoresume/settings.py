@@ -140,6 +140,7 @@ STATIC_ROOT=os.path.join(BASE_DIR,'static')
 STATICFILES_DIRS =[
     os.path.join(BASE_DIR,'djangoresume/static')
 ]
+MEDIA_ROOT= '/media/'
 
 # compress css,image,allows heroku to use them
 # STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'

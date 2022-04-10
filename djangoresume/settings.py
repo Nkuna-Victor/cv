@@ -138,7 +138,10 @@ STATIC_ROOT=os.path.join('staticfiles')
 # /VAR/WWW/EXAMPLE.COM/STATIC ABS PATH WHERE ./MANAGE.PY COLLECTSTATIC WILL COLLECT STATIC FILES FOR DEPLOYMENT ONLY
 
 STATICFILES_DIRS =[
-    os.path.join(BASE_DIR/'static')
+    os.path.join(BASE_DIR,'static'),
+    '/app/static',
+    'var/www/static/',
+
 ]
 MEDIA_URL= '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

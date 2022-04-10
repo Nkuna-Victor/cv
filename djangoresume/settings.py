@@ -2,14 +2,15 @@
 
 
 import os
-
+import django_on_heroku
 import sys
 from os.path import join ,dirname
 from pathlib import Path
 
 from dotenv import load_dotenv
 
-
+#  Configure Django App for Heroku.
+django_on_heroku.settings(locals())
 # 
 dotenv_path = join(dirname(__file__),'.env')
 load_dotenv(dotenv_path)
@@ -49,7 +50,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -142,7 +143,7 @@ STATICFILES_DIRS =[
 ]
 
 # compress css,image,allows heroku to use them
-# STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # 

@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = ['localhost','victornkuna.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -141,6 +141,7 @@ STATIC_ROOT=os.path.join(BASE_DIR,'static')
 STATICFILES_DIRS =[
     os.path.join(BASE_DIR,'djangoresume/static')
 ]
+MEDIA_ROOT= '/media/'
 
 # compress css,image,allows heroku to use them
 STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'

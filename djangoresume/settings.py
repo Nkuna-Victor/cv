@@ -136,12 +136,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # load our named static folder
 
-# STATIC_ROOT=os.path.join(BASE_DIR,'static')
+STATIC_ROOT=os.path.join(BASE_DIR,'static')
 # /VAR/WWW/EXAMPLE.COM/STATIC ABS PATH WHERE ./MANAGE.PY COLLECTSTATIIC WILL COLLECT STATIC FILES FOR DEPLOYMENT ONLY
 
-STATICFILES_DIRS =[
-    os.path.join(BASE_DIR,'djangoresume/static')
-]
+# STATICFILES_DIRS =[
+#     os.path.join(BASE_DIR,'djangoresume/static')
+# ]
 MEDIA_ROOT= '/media/'
 
 # compress css,image,allows heroku to use them

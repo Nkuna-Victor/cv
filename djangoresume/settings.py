@@ -138,7 +138,7 @@ STATIC_ROOT=os.path.join('staticfiles')
 # /VAR/WWW/EXAMPLE.COM/STATIC ABS PATH WHERE ./MANAGE.PY COLLECTSTATIC WILL COLLECT STATIC FILES FOR DEPLOYMENT ONLY
 
 STATICFILES_DIRS =[
-    os.path.join(BASE_DIR,'static')
+    os.path.join(BASE_DIR/'static')
 ]
 MEDIA_URL= '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -152,3 +152,42 @@ STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
 #  Configure Django App for Heroku.
 django_on_heroku.settings(locals())
 # 
+
+
+
+# Debugging in heroku live
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': ('%(asctime)s [%(process)d] [%(levelname)s] ' +
+                       'pathname=%(pathname)s lineno=%(lineno)s ' +
+                       'funcname=%(funcName)s %(message)s'),
+            'datefmt': '%Y-%m-%d %H:%M:%S'
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        }
+    },
+    'handlers': {
+        'null': {
+            'level': 'DEBUG',
+            'class': 'logging.NullHandler',
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose'
+        }
+    },
+    'loggers': {
+        'testlogger': {
+            'handlers': ['console'],
+            'level': 'INFO',
+        }
+    }
+}
+
+DEBUG_PROPAGATE_EXCEPTIONS = True
+COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)

@@ -9,9 +9,7 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-#  Configure Django App for Heroku.
-django_on_heroku.settings(locals())
-# 
+
 dotenv_path = join(dirname(__file__),'.env')
 load_dotenv(dotenv_path)
 
@@ -19,9 +17,9 @@ load_dotenv(dotenv_path)
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # 
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+# BASE_DIR = Path(__file__).resolve().parent.parent
 
-# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATES_DIR = os.path.join(BASE_DIR,'templates')
 
 # Quick-start development settings - unsuitable for production
@@ -136,12 +134,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # load our named static folder
 
-STATIC_ROOT=os.path.join(BASE_DIR,'static')
-# /VAR/WWW/EXAMPLE.COM/STATIC ABS PATH WHERE ./MANAGE.PY COLLECTSTATIIC WILL COLLECT STATIC FILES FOR DEPLOYMENT ONLY
+STATIC_ROOT=os.path.join('staticfiles')
+# /VAR/WWW/EXAMPLE.COM/STATIC ABS PATH WHERE ./MANAGE.PY COLLECTSTATIC WILL COLLECT STATIC FILES FOR DEPLOYMENT ONLY
 
-# STATICFILES_DIRS =[
-#     os.path.join(BASE_DIR,'djangoresume/static')
-# ]
+STATICFILES_DIRS =[
+    os.path.join(BASE_DIR,'static')
+]
 MEDIA_ROOT= '/media/'
 
 # compress css,image,allows heroku to use them
@@ -150,3 +148,6 @@ STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # 
 
+#  Configure Django App for Heroku.
+django_on_heroku.settings(locals())
+# 

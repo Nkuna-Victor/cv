@@ -134,18 +134,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # load our named static folder
 
-STATIC_ROOT=os.path.join('staticfiles')
+STATIC_ROOT=os.path.join('static')
 # /VAR/WWW/EXAMPLE.COM/STATIC ABS PATH WHERE ./MANAGE.PY COLLECTSTATIC WILL COLLECT STATIC FILES FOR DEPLOYMENT ONLY
 
 STATICFILES_DIRS =[
-    os.path.join(BASE_DIR,'static'),
-    '/app/static',
-    'var/www/static/',
+    os.path.join(BASE_DIR,'')
 
 ]
-MEDIA_URL= '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
 # compress css,image,allows heroku to use them
 STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
 

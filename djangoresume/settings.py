@@ -138,7 +138,7 @@ STATIC_ROOT=os.path.join('static')
 # /VAR/WWW/EXAMPLE.COM/STATIC ABS PATH WHERE ./MANAGE.PY COLLECTSTATIC WILL COLLECT STATIC FILES FOR DEPLOYMENT ONLY
 
 STATICFILES_DIRS =[
-    os.path.join(BASE_DIR,'')
+    os.path.join(BASE_DIR,'staticfiles')
 
 ]
 # compress css,image,allows heroku to use them
